@@ -27,6 +27,8 @@ When figwheel repl has finished compiling clojurescript hit `(go)` on the clojur
 
 Hit `(reset)` when you have completed changes to reload changed files and restart the system.
 
+Use the sass watcher plugin of leiningen to watch and automatically reload scss files located on `resources/public/sass` directory with `lein sass auto`
+
 ## Test
 
 Use `lein test` to run tests
