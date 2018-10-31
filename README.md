@@ -1,6 +1,6 @@
 # scramblies-challenge
 
-FIXME
+Scramble challenge
 
 ## Prerequisites
 
@@ -8,11 +8,35 @@ You will need [Leiningen][] 2.0.0 or above installed.
 
 [leiningen]: https://github.com/technomancy/leiningen
 
-## Running
+## Configuration
 
-To start a web server for the application, run:
+You need to have a file named `config.edn` at project's top level with following contents
+```Clojure
+{:server {:port <port-number>}}
+```
 
-    lein ring server
+## Develop
+
+Development is done with Emacs + CIDER. 
+
+When you're on a clj buffer <kbd>M-x cider-jack-in-clj&cljs</kbd>
+
+When prompted for clojurescript repl type, provide `figwheel`
+
+When figwheel repl has finished compiling clojurescript hit `(go)` on the clojure repl to start the system.
+
+Hit `(reset)` when you have completed changes to reload changed files and restart the system.
+
+## Test
+
+Use `lein test` to run tests
+
+## Build
+
+`lein uberjar`
+
+Make sure to have the config.edn file on the same level with the produced uberjar that you want to run. 
+
 
 ## License
 
